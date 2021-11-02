@@ -5,12 +5,22 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Task1", "Task1\Task1.ssmssqlproj", "{C9F8C16D-6B19-432B-8433-5F61FF525744}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Task2", "Task2\Task2.ssmssqlproj", "{98B876ED-27A6-4D63-AFC6-245EFFC91D0A}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Task3", "Task3\Task3.ssmssqlproj", "{196178B5-6261-49C4-9ED7-BB01F3207015}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Task4", "Task4\Task4.ssmssqlproj", "{9AAFCB75-407F-4EA4-9FD1-A37736046994}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C9F8C16D-6B19-432B-8433-5F61FF525744}.Default|Default.ActiveCfg = Default
+		{98B876ED-27A6-4D63-AFC6-245EFFC91D0A}.Default|Default.ActiveCfg = Default
+		{196178B5-6261-49C4-9ED7-BB01F3207015}.Default|Default.ActiveCfg = Default
+		{9AAFCB75-407F-4EA4-9FD1-A37736046994}.Default|Default.ActiveCfg = Default
+		{284AEDE3-D976-424B-BD7C-C211AEC69596}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
