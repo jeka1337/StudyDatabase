@@ -61,6 +61,18 @@
           <AssociatedConnUserName />
           <FullPath>InitDB.sql</FullPath>
         </FileNode>
+        <FileNode Name="InitTable.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN-0L58VJJH0V3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN-0L58VJJH0V3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>InitTable.sql</FullPath>
+        </FileNode>
+        <FileNode Name="InsertValues.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN-0L58VJJH0V3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN-0L58VJJH0V3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>InsertValues.sql</FullPath>
+        </FileNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Разное" Type="3" Sorted="true">
