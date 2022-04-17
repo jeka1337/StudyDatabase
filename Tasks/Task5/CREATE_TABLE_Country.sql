@@ -1,0 +1,14 @@
+USE MusicShop;
+
+CREATE TABLE Country (
+    ID UNIQUEIDENTIFIER DEFAULT NEWID()
+	CONSTRAINT PK_Country PRIMARY KEY,
+    [Name] VARCHAR(50) NOT NULL,
+);
+
+ALTER TABLE Country
+ADD CONSTRAINT u_CountryName UNIQUE([Name]);
+
+ALTER TABLE Country
+ADD CONSTRAINT ch_EmptyCountryName
+CHECK (LEN(Name) > 1);
