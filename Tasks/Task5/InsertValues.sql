@@ -1,9 +1,9 @@
 USE MusicShop;
 
 --Insert Composers
-EXEC dbo.pComposerInsert @FirstName = N'Kanye' , @PatronicName = None, @LastName = 'West', @Birthday = '1977-07-08'
-EXEC dbo.pComposerInsert @FirstName = N'Frank' , @PatronicName = None, @LastName = 'Sinatra', @Birthday = '1915-12-12'
-EXEC dbo.pComposerInsert @FirstName = N'Jimi' , @PatronicName = None, @LastName = 'Hendrix', @Birthday = '1942-11-27'
+EXEC dbo.pComposerInsert @FirstName = N'Kanye' , @PatronicName = NULL, @LastName = 'West', @Birthday = '1977-07-08'
+EXEC dbo.pComposerInsert @FirstName = N'Frank' , @PatronicName = NULL, @LastName = 'Sinatra', @Birthday = '1915-12-12'
+EXEC dbo.pComposerInsert @FirstName = N'Jimi' , @PatronicName = NULL, @LastName = 'Hendrix', @Birthday = '1942-11-27'
 
 
 -- Insert Albums
@@ -33,7 +33,7 @@ EXEC dbo.pGenreInsert @Name = 'Rap'
 -- Insert Compositions
 EXEC dbo.pCompositionInsert @SerialNumber='4CE0460D0G',
 @ComposerFirstName = 'Kanye',
-@ComposerPatronicName = None, 
+@ComposerPatronicName = NULL, 
 @ComposerLastName = 'West',
 @Name = 'Flashing Lights', 
 @Duration = 241, 
@@ -45,7 +45,7 @@ EXEC dbo.pCompositionInsert @SerialNumber='4CE0460D0G',
 
 EXEC dbo.pCompositionInsert @SerialNumber='4CE0460545',
 @ComposerFirstName = 'Kanye',
-@ComposerPatronicName = None, 
+@ComposerPatronicName = NULL, 
 @ComposerLastName = 'West',
 @Name = 'Power', 
 @Duration = 241, 
@@ -57,7 +57,7 @@ EXEC dbo.pCompositionInsert @SerialNumber='4CE0460545',
 
 EXEC dbo.pCompositionInsert @SerialNumber='234FDSEDSF',
 @ComposerFirstName = 'Frank',
-@ComposerPatronicName = None, 
+@ComposerPatronicName = NULL, 
 @ComposerLastName = 'Sinatra',
 @Name = 'Yesterday', 
 @Duration = 241, 
@@ -69,7 +69,7 @@ EXEC dbo.pCompositionInsert @SerialNumber='234FDSEDSF',
 
 EXEC dbo.pCompositionInsert @SerialNumber='34SDCEEDSF',
 @ComposerFirstName = 'Jimi',
-@ComposerPatronicName = None, 
+@ComposerPatronicName = NULL, 
 @ComposerLastName = 'Hendrix',
 @Name = 'Can You See Me', 
 @Duration = 181, 
