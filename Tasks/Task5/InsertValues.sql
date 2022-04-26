@@ -1,108 +1,92 @@
--- Insert Composers
-INSERT INTO Composer VALUES ('Kanye West', '1977-07-08');
-INSERT INTO Composer VALUES ('Frank Sinatra', '1915-12-12');
-INSERT INTO Composer VALUES ('Jimi Hendrix', '1942-11-27');
+USE MusicShop;
+
+--Insert Composers
+EXEC dbo.pComposerInsert @FirstName = N'Kanye' , @PatronicName = None, @LastName = 'West', @Birthday = '1977-07-08'
+EXEC dbo.pComposerInsert @FirstName = N'Frank' , @PatronicName = None, @LastName = 'Sinatra', @Birthday = '1915-12-12'
+EXEC dbo.pComposerInsert @FirstName = N'Jimi' , @PatronicName = None, @LastName = 'Hendrix', @Birthday = '1942-11-27'
+
 
 -- Insert Albums
-INSERT INTO Album VALUES ('Graduation','Cool', '2007-09-11');
-INSERT INTO Album VALUES ('My Beautiful Dark Twisted Fantasy','Good', '2013-06-03');
-INSERT INTO Album VALUES ('My Way','Rare', '1969-12-23');
-INSERT INTO Album VALUES ('Are You Experienced', 'Usual', '1967-12-05');
+EXEC dbo.pAlbumInsert @Name = 'Graduation' , @Description = 'Cool', @DateOfProduction = '2007-09-11'
+EXEC dbo.pAlbumInsert @Name = 'My Beautiful Dark Twisted Fantasy' , @Description = 'Good', @DateOfProduction = '2013-06-03'
+EXEC dbo.pAlbumInsert @Name = 'My Way' , @Description = 'Rare', @DateOfProduction = '1969-12-23'
+EXEC dbo.pAlbumInsert @Name = 'Are You Experienced' , @Description = 'Usual', @DateOfProduction = '1967-12-05'
+
 
 -- Insert Storage Medium
-INSERT INTO StorageMedium VALUES ('CD');
-INSERT INTO StorageMedium VALUES ('Tape');
-INSERT INTO StorageMedium VALUES ('Online');
+EXEC dbo.pStorageMediumInsert @StorageMediumType = 'CD'
+EXEC dbo.pStorageMediumInsert @StorageMediumType = 'Tape'
+EXEC dbo.pStorageMediumInsert @StorageMediumType = 'Online'
+
 
 -- Insert Countries
-INSERT INTO Country VALUES ('United States');
-INSERT INTO Country VALUES ('Spain');
+EXEC dbo.pCountryInsert @Name = 'United States'
+EXEC dbo.pCountryInsert @Name = 'Spain'
+
 
 -- Insert Genres
-INSERT INTO Genre VALUES ('Pop');
-INSERT INTO Genre VALUES ('Hard rock');
-INSERT INTO Genre VALUES ('Rap');
+EXEC dbo.pGenreInsert @Name = 'Pop'
+EXEC dbo.pGenreInsert @Name = 'Hard rock'
+EXEC dbo.pGenreInsert @Name = 'Rap'
+
 
 -- Insert Compositions
-INSERT INTO Composition VALUES ('4CE0460D0G',
-1, --ComposerID
-'Flashing Lights', --Name
-241, --Duration
-1, --AlbumID
-1, --StorageMediumID
-1, --CountryID
-3, --GenreID
-5 --Price
-);
-INSERT INTO Composition VALUES ('4CE0460D0G',
-1, --ComposerID
-'Flashing Lights', --Name
-241, --Duration
-1, --AlbumID
-3, --StorageMediumID
-1, --CountryID
-3, --GenreID
-5 --Price
-);
-INSERT INTO Composition VALUES ('4CE0460D0G',
-1, --ComposerID
-'Flashing Lights', --Name
-241, --Duration
-1, --AlbumID
-2, --StorageMediumID
-1, --CountryID
-3, --GenreID
-4 --Price
-);
-INSERT INTO Composition VALUES ('4CE0460D0G',
-1, --ComposerID
-'Power', --Name
-201, --Duration
-2, --AlbumID
-1, --StorageMediumID
-1, --CountryID
-3, --GenreID
-7 --Price
-);
-INSERT INTO Composition VALUES ('4CE0460DSG',
-2, --ComposerID
-'Yesterday', --Name
-223, --Duration
-3, --AlbumID
-2, --StorageMediumID
-1, --CountryID
-1, --GenreID
-10 --Price
-);
-INSERT INTO Composition VALUES ('4CE0443454',
-3, --ComposerID
-'Can You See Me', --Name
-181, --Duration
-4, --AlbumID
-2, --StorageMediumID
-1, --CountryID
-2, --GenreID
-12 --Price
-);
+EXEC dbo.pCompositionInsert @SerialNumber='4CE0460D0G',
+@ComposerFirstName = 'Kanye',
+@ComposerPatronicName = None, 
+@ComposerLastName = 'West',
+@Name = 'Flashing Lights', 
+@Duration = 241, 
+@AlbumName = 'Graduation', 
+@StorageMediumType = 'CD', 
+@CountryName = 'United States', 
+@GenreName = 'RAP', 
+@Price = 5
 
---INSERT INTO Composition (SerialNumber ,ComposerID , [Name], Duration, StorageMediumID, CountryID, GenreID, Price)
---VALUES (1, 1, 'name', 12,1,1,1,13);
+EXEC dbo.pCompositionInsert @SerialNumber='4CE0460545',
+@ComposerFirstName = 'Kanye',
+@ComposerPatronicName = None, 
+@ComposerLastName = 'West',
+@Name = 'Power', 
+@Duration = 241, 
+@AlbumName = 'My Beautiful Dark Twisted Fantasy', 
+@StorageMediumType = 'Online', 
+@CountryName = 'United States', 
+@GenreName = 'RAP', 
+@Price = 5
 
-INSERT INTO Warehouse VALUES ('ul. Kosmonavtov 35-11,Vyborg,Leningradskaya oblast','89100900602');
-INSERT INTO Warehouse VALUES ('Sheldon Cooper & Leonard Hofstadter,Apt 4B 2311 North Los Robles Avenue,Pasadena'
-,'89100900703');
+EXEC dbo.pCompositionInsert @SerialNumber='234FDSEDSF',
+@ComposerFirstName = 'Frank',
+@ComposerPatronicName = None, 
+@ComposerLastName = 'Sinatra',
+@Name = 'Yesterday', 
+@Duration = 241, 
+@AlbumName = 'My Way', 
+@StorageMediumType = 'CD', 
+@CountryName = 'United States', 
+@GenreName = 'Pop', 
+@Price = 5
+
+EXEC dbo.pCompositionInsert @SerialNumber='34SDCEEDSF',
+@ComposerFirstName = 'Jimi',
+@ComposerPatronicName = None, 
+@ComposerLastName = 'Hendrix',
+@Name = 'Can You See Me', 
+@Duration = 181, 
+@AlbumName = 'Are You Experienced', 
+@StorageMediumType = 'Tape', 
+@CountryName = 'United States', 
+@GenreName = 'Hard rock', 
+@Price = 10
 
 
-INSERT INTO Stock VALUES (1,1);
-INSERT INTO Stock VALUES (1,1);
-INSERT INTO Stock VALUES (1,1);
-INSERT INTO Stock VALUES (2,2);
-INSERT INTO Stock VALUES (3,1);
-INSERT INTO Stock VALUES (4,1);
-INSERT INTO Stock VALUES (1,2);
-INSERT INTO Stock VALUES (5,1);
-INSERT INTO Stock VALUES (2,1);
-INSERT INTO Stock VALUES (2,1);
-INSERT INTO Stock VALUES (3,2);
-INSERT INTO Stock VALUES (2,2);
-INSERT INTO Stock VALUES (2,1);
+-- Insert Warehouse
+EXEC dbo.pWarehouseInsert @Address='ul. Kosmonavtov 35-11,Vyborg,Leningradskaya oblast', @TelephoneNumber='89100900602'
+EXEC dbo.pWarehouseInsert @Address='Sheldon Cooper & Leonard Hofstadter,Apt 4B 2311 North Los Robles Avenue,Pasadena', @TelephoneNumber='89100900703'
+
+
+-- Insert Stock
+EXEC dbo.pStockInsert @SerialNumber='4CE0460D0G', @Address='ul. Kosmonavtov 35-11,Vyborg,Leningradskaya oblast'
+EXEC dbo.pStockInsert @SerialNumber='4CE0460545', @Address='ul. Kosmonavtov 35-11,Vyborg,Leningradskaya oblast'
+EXEC dbo.pStockInsert @SerialNumber='234FDSEDSF', @Address='ul. Kosmonavtov 35-11,Vyborg,Leningradskaya oblast'
+EXEC dbo.pStockInsert @SerialNumber='34SDCEEDSF', @Address='Sheldon Cooper & Leonard Hofstadter,Apt 4B 2311 North Los Robles Avenue,Pasadena'

@@ -1,0 +1,4 @@
+ALTER VIEW vAlbum AS(
+SELECT *
+FROM Album
+);
